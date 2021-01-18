@@ -3,7 +3,7 @@ This script is intended to parse UE Capability Information message, from Wiresha
 It will extract some information and show an Excel table in a friendly format.
 
 So far, it is parsing:
-1) Supported Bands
+1) Supported Bands (LTE and NR)
 2) Bandwidth Class
 3) MIMO information
 4) Total number of layers in a band combination
