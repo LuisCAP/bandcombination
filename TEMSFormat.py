@@ -389,6 +389,8 @@ def parseRAT(fileLines):
                 if fileLines[j].find('[') == rat_type_index:
                     itemLine = fileLines[j]
                     rat_item = int(itemLine[fileLines[j].find("[") + len("["):None].replace(']', '').replace(': ', ''))
+                    if (fileLines[j + 1]).find('RAT Type') == -1:
+                        j = j + 1
                     ratLine = fileLines[j + 1]
                     rat_type = ratLine[fileLines[j + 1].find('RAT Type : ') + len('RAT Type : '):None]
                     ratDic = {'StartingPoint': j + 1, 'Item': rat_item, 'Rat': rat_type}
